@@ -9,7 +9,7 @@ class SaveFile implements GenericForm, Loadable{
     private $submitted = false;
     private $fileErrors = [];
 
-    public function __construct(Save $saver, \FileUpload\FileUpload $uploader, $submitted = false, $fileErrors = []) {
+    public function __construct(Save $saver, \FileUpload\FileUpload $uploader, bool $submitted = false, array $fileErrors = []) {
         $this->saver = $saver;
         $this->uploader = $uploader;
         $this->uploader->setFileNameGenerator(new \FileUpload\FileNameGenerator\Custom(function ($sourceName) {

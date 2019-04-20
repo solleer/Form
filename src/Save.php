@@ -15,9 +15,9 @@ class Save implements GenericForm, Loadable {
     public function __construct(
         \ArrayAccess $mapper,
         RespectAllOf $validator,
-        $submitted = false,
-        $data = [],
-        $errors = []
+        bool $submitted = false,
+        array $data = [],
+        array $errors = []
     ) {
         $this->mapper = $mapper;
         $this->validator = $validator;
